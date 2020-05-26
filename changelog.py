@@ -64,10 +64,6 @@ def parse_git_log(log_out):
         changelog[tag]['summary'] = tagsum
         changelog[tag]['date'] = date
         parse_comment(changelog, tag, comment)
-        # subs = [match.groups() for match in
-        #     re.finditer(r'(\[\w+\])([^\[]*)', comment)]
-        # for sub in subs:
-        #     changelog[tag][sub[0]].append(sub[1])
     return changelog
 
 def print_section(d, key, section_text):
