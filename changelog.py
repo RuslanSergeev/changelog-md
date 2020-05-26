@@ -26,6 +26,24 @@ def prepare_log():
     log=list(map(lambda line: line.split('|'), log))
     return log
 
+def parse_comment(changelog, tag, comment):
+    tokens=['[feature]', '[fix]', '[changelog]']
+    comment = comment.split(' ')
+    comment = list(filter(lambda word: len(word), comment))
+    token='[else]' #everything else falls in [else] section.
+    description = ''
+    for word in comment:
+        if word in tokens:
+            if len(description):
+                changelog[tag][token].append(description)
+            token = word
+            description = ''
+        else:
+            description = description +' '+word
+    if len(description):
+        changelog[tag][token].append(description)
+
+
 def parse_git_log(log_out):
     #until first valid tag in timeline
     #everything is unreleased
@@ -45,10 +63,11 @@ def parse_git_log(log_out):
         tagsum=tag_proc.stdout.split('\n')
         changelog[tag]['summary'] = tagsum
         changelog[tag]['date'] = date
-        subs = [match.groups() for match in
-            re.finditer(r'(\[\w+\])([^\[]*)', comment)]
-        for sub in subs:
-            changelog[tag][sub[0]].append(sub[1])
+        parse_comment(changelog, tag, comment)
+        # subs = [match.groups() for match in
+        #     re.finditer(r'(\[\w+\])([^\[]*)', comment)]
+        # for sub in subs:
+        #     changelog[tag][sub[0]].append(sub[1])
     return changelog
 
 def print_section(d, key, section_text):
