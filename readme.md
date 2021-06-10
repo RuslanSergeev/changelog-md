@@ -1,6 +1,15 @@
-# Readme on changelog.py
+# install with pip
+```bash
+python3 -m pip install changelog-md
+``` 
 
-### execution information:
+# install with Poetry
+```
+poetry add changelog-md
+```
+
+# execution information:
+
 This script aim to provide changelogs on git-tracked projects.
 Run `changelog.py` script in your directory 
 and it'll generate the changelog file.
@@ -35,10 +44,11 @@ l.make()                                                      #print the log
 More actual information on colophon of scripts:
 ```shell
 #actual information on colophon:
-python3 changelog.py --help
+python3 -m git_changelog --help
 ```
 
-### correct commit messages:
+# correct commit messages:
+
 To make this scripts work properly, your commit messages
 should look like any of this:
 ```
@@ -49,7 +59,8 @@ should look like any of this:
 This commit message string will be ommited from changelog.
 ```
 
-### Releases:
+#  Releases:
+
 Any tagged commit will be interpreted as release.
 To create tag, write:
 ```

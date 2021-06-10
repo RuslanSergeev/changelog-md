@@ -1,10 +1,10 @@
 
 ---
 
-# v0.1.0 (2021.06.11 )
+# v0.1.2 (2021.06.11 )
 
 ```
-Made the project a python package
+made changelog-md python installable package
 ```
 ### new features:
  - [x]  Made a pip-installable python package out of this project.

@@ -1,9 +1,13 @@
 [tool.poetry]
-name = "git_changelog"
-version = "0.1.0"
+name = "changelog_md"
+version = "0.1.1"
 description = "A package to create changelogs for your git tracked projects."
 authors = ["Ruslan Sergeev <mybox.sergeev@gmail.com>"]
 license = "MIT"
+readme = "readme.md"
+homepage = "https://github.com/RuslanSergeev/git_changelog"
+repository = "https://github.com/RuslanSergeev/git_changelog"
+keywords = ["markdown", "changelog", "cicd"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
