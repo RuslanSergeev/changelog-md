@@ -13,7 +13,7 @@ python3 changelog.py vX.Y.Z "Annotation for this version" #generate changelog
 git add changelog.md #stage the changelog to current commit
 git commit --amend #add the changelog to current commit, leave commit message as is.
 git tag -a vX.Y.Z -m "Annotation for this version" #add the tag you've set earlier in changelog.
-git push #publish your changes.
+git push --follow-tags #publish your changes and the new tag.
 ```
 
 More actual information on colophon of scripts:
