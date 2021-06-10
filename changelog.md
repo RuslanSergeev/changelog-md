@@ -1,16 +1,21 @@
 
 ---
 
-# v.0.0.2 ( 2020.05.23 )
+# v0.0.2 (2021.06.10 )
 
 ```
-Исправлен парсер коментариев к коммитам.
+English comments, logger moved to a class, new supported sections, refreshed docs
 ```
 ### new features:
- - [x]  добавлена поддерка скобочек [скобки] остальное не должно попадать...
+ - [x]  code moved into a `logger` class
+ - [x]  private methods marked as private.
+ - [x]  added section `internal`
+ - [x]  release and annotation arguments.
+ - [x]  refreshed docs.
+ - [x]  Added support of brackets [simple brackets in the commit message]
 ### bug fixes:
- - [x]  добавлены многострочные коментарии
- - [x]  добавлена поддержка [ссылок](http://www.google.ru)
+ - [x]  Added multiline comments.
+ - [x]  Added reference support [reference example](http://www.google.ru)
 ### minor changes:
  - [x]  Added changelog, added readme files.
 
