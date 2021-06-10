@@ -1,7 +1,20 @@
 
 ---
 
-# v0.0.2 (2021.06.10 )
+# v0.1.0 (2021.06.11 )
+
+```
+Made the project a python package
+```
+### new features:
+ - [x]  Made a pip-installable python package out of this project.
+ - [x]  Added info on tagging correctly into readme.
+### minor changes:
+ - [x]  removed `changelog.sh` bash script.
+
+---
+
+# v0.0.2 ( 2021.06.10 )
 
 ```
 English comments, logger moved to a class, new supported sections, refreshed docs

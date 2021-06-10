@@ -6,15 +6,31 @@ Run `changelog.py` script in your directory
 and it'll generate the changelog file.
 In order to obtain actual changelog, run:
 
-```shell
+
+You can use git changelog from command line directly:
+```bash
 # ... code on project
-git commit #add your commit message on work you've done
-python3 changelog.py vX.Y.Z "Annotation for this version" #generate changelog
-git add changelog.md #stage the changelog to current commit
-git commit --amend #add the changelog to current commit, leave commit message as is.
-git tag -a vX.Y.Z -m "Annotation for this version" #add the tag you've set earlier in changelog.
-git push --follow-tags #publish your changes and the new tag.
+git commit                                                    #add your commit message on work you've done
+python3 -m git_changelog vX.Y.Z "Annotation for this version" #generate changelog
+git add changelog.md                                          #stage the changelog to current commit
+git commit --amend                                            #add the changelog to current commit, leave commit message as is.
+git tag -a vX.Y.Z -m "Annotation for this version"            #add the tag you've set earlier in changelog.
+git push --follow-tags                                        #publish your changes and the new tag.
 ```
+
+Or you can elaborate your workflow python scripts 
+to use git_changelog as a python module:
+```python
+# CICD_script.py
+# ... do some CICD work
+
+from git_changelog import logger
+l = logger('vX.Y.Z', 'Annotation for this version')           #create logger instance
+l.make()                                                      #print the log
+
+# ... do other CICD work
+```
+
 
 More actual information on colophon of scripts:
 ```shell
