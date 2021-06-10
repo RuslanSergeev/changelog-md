@@ -7,9 +7,13 @@ and it'll generate the changelog file.
 In order to obtain actual changelog, run:
 
 ```shell
-python3 changelog.py vX.Y.Z "Annotation for this version"
-git commit --amend
-git push
+# ... code on project
+git commit #add your commit message on work you've done
+python3 changelog.py vX.Y.Z "Annotation for this version" #generate changelog
+git add changelog.md #stage the changelog to current commit
+git commit --amend #add the changelog to current commit, leave commit message as is.
+git tag -a vX.Y.Z -m "Annotation for this version" #add the tag you've set earlier in changelog.
+git push #publish your changes.
 ```
 
 More actual information on colophon of scripts:
