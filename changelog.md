@@ -1,7 +1,17 @@
 
 ---
 
-# v0.1.2 (2021.06.11 )
+# v0.1.4 (2021.06.11 )
+
+```
+fix in documentation errors
+```
+### bug fixes:
+ - [x]  fixed errors in readme
+
+---
+
+# v0.1.3 ( 2021.06.11 )
 
 ```
 made changelog-md python installable package
