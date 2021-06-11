@@ -1,3 +1,9 @@
+# general description
+
+This script aim to provide changelogs on git-tracked projects.  
+Run `changelog.py` script in your directory and it'll generate the changelog file.  
+[See this generated changelog for an example](changelog.md)  
+
 # install with pip
 ```bash
 python3 -m pip install changelog-md
@@ -10,9 +16,6 @@ poetry add changelog-md
 
 # execution information:
 
-This script aim to provide changelogs on git-tracked projects.
-Run `changelog.py` script in your directory 
-and it'll generate the changelog file.
 In order to obtain actual changelog, run:
 
 
