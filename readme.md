@@ -20,7 +20,7 @@ You can use git changelog from command line directly:
 ```bash
 # ... code on project
 git commit                                                    #add your commit message on work you've done
-python3 -m changelog-md vX.Y.Z "Annotation for this version" #generate changelog
+python3 -m changelog_md vX.Y.Z "Annotation for this version" #generate changelog
 git add changelog.md                                          #stage the changelog to current commit
 git commit --amend                                            #add the changelog to current commit, leave commit message as is.
 git tag -a vX.Y.Z -m "Annotation for this version"            #add the tag you've set earlier in changelog.
@@ -28,12 +28,12 @@ git push --follow-tags                                        #publish your chan
 ```
 
 Or you can elaborate your workflow python scripts 
-to use changelog-md as a python module:
+to use changelog_md as a python module:
 ```python
 # CICD_script.py
 # ... do some CICD work
 
-from changelog-md import logger
+from changelog_md import logger
 l = logger('vX.Y.Z', 'Annotation for this version')           #create logger instance
 l.make()                                                      #print the log
 
@@ -44,7 +44,7 @@ l.make()                                                      #print the log
 More actual information on colophon of scripts:
 ```shell
 #actual information on colophon:
-python3 -m changelog-md --help
+python3 -m changelog_md --help
 ```
 
 # correct commit messages:
