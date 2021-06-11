@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "changelog_md"
-version = "0.1.2"
+version = "0.1.3"
 description = "A package to create changelogs for your git tracked projects."
 authors = ["Ruslan Sergeev <mybox.sergeev@gmail.com>"]
 license = "MIT"
